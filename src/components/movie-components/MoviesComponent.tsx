@@ -1,7 +1,7 @@
 import React from 'react'
 import { movieService } from '@/services/api.service'
-
 import MovieComponent from '@/components/movie-components/MovieComponent'
+
 
 const MoviesComponent = async () => {
     const [movies, genres] = await Promise.all([
