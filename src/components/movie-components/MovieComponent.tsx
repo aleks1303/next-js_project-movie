@@ -14,7 +14,7 @@ interface Props {
 const MovieComponent = ({ item, genreNames }: Props) => {
     return (
         <Link href={`/movie/details/${item.id}`}>
-            <div className="bg-black text-white p-2 rounded h-137">
+            <div className="bg-black text-white p-2 rounded h-135">
                 <Image
                     src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                     alt={item.title}
