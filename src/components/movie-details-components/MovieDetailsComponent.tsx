@@ -7,11 +7,12 @@ import StarsRating from "@/components/renting-component/RentingComponent";
 import Image from "next/image";
 
 type Props = {
-    params: { id: string }
+    params: Promise<{ id: string }>
 }
 
 const MovieDetailsComponent = async ({params}: Props) => {
-    const movie = await movieService.getMovieById(params.id)
+    const paramsDetails = await params
+    const movie = await movieService.getMovieById(paramsDetails.id)
 
     return (
         <div className={"p-3 bg-gray-100 flex gap-6"}>
