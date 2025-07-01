@@ -4,7 +4,7 @@ type Props = {
     params: {id:string}
 }
 
-const DetailsByIdPage = ({params}:Props) => {
+const DetailsByIdPage = async ({params}:Props) => {
 
 
     return (

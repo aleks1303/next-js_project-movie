@@ -4,13 +4,17 @@ import GenresComponent from "@/components/genres-components/genresComponent";
 import PaginationComponent from "@/components/pagination-component/PaginationComponent";
 
 type Props = {
-    searchParams: { [key: string]: string | string[] | undefined }
+    searchParams: Promise<{
+        page?: string,
+        genre?: string,
+        [key: string]: string | string[] | undefined
+    }>
 }
 
-const HomePage = ( {searchParams}:Props) => {
-
-    const page = typeof searchParams.page === 'string' ? searchParams.page : '1';
-    const genre = typeof searchParams.genre === 'string' ? searchParams.genre : '';
+const HomePage = async ( {searchParams}:Props) => {
+    const params = await searchParams
+    const page = typeof params.page === 'string' ? params.page : '1';
+    const genre = typeof params.genre === 'string' ? params.genre : '';
     return (
         <div>
             <header>
