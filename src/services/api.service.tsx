@@ -14,6 +14,10 @@ export const movieService = {
     getGenres: async (): Promise<IGenres[]> => {
         const { data } = await moviesApi.get('/genre/movie/list')
         return data.genres
-    }
+    },
+    getMovieById: async (id: string): Promise<IMovies> => {
+        const {data} = await moviesApi.get(`/movie/${id}`)
+        return data
+    },
 }
 

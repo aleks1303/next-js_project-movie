@@ -1,12 +1,15 @@
 import React from 'react';
+import MovieDetailsComponent from "@/components/movie-details-components/MovieDetailsComponent";
+type Props = {
+    params: {id:string}
+}
 
+const DetailsByIdPage = ({params}:Props) => {
 
-const DetailsByIdPage =  () => {
 
     return (
         <div>
-          hello
-
+            <MovieDetailsComponent params={params}/>
         </div>
     );
 };
