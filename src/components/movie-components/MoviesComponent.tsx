@@ -3,10 +3,10 @@ import { movieService } from '@/services/api.service'
 import MovieComponent from '@/components/movie-components/MovieComponent'
 
 
-const MoviesComponent = async () => {
+const MoviesComponent = async ({page = '1', genre = ''}) => {
     const [movies, genres] = await Promise.all([
-        movieService.getAllMovies(),
-        movieService.getGenres()
+        movieService.getAllMovies(page, genre ),
+        movieService.getAllGenres()
     ])
 
     return (

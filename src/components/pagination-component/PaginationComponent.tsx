@@ -6,7 +6,7 @@ import {useRouter, useSearchParams} from "next/navigation";
 const PaginationComponent = () => {
     const searchParams = useSearchParams();
     const router = useRouter()
-    const page = searchParams.get('page')
+    const page = Number(searchParams.get('page'))
     const genreParams = searchParams.get('genre') || ''
     const numberPage = Number(page) || 1
     const totalPage = 500

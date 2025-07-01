@@ -7,15 +7,16 @@ import StarsRating from "@/components/renting-component/RentingComponent";
 import Image from "next/image";
 
 type Props = {
-    params: {id:string}
+    params: { id: string }
 }
 
-const MovieDetailsComponent = async ({params}:Props) => {
+const MovieDetailsComponent = async ({params}: Props) => {
     const movie = await movieService.getMovieById(params.id)
 
     return (
         <div className={"p-3 bg-gray-100 flex gap-6"}>
-            <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-120"/>
+            <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className={'w-150'}
+                   width={'900'} height={'100'}/>
             <div>
                 <h1 className={"text-4xl underline"}>{movie.title}</h1>
                 <p>{movie.tagline}</p>
@@ -29,7 +30,7 @@ const MovieDetailsComponent = async ({params}:Props) => {
                 <div className={"mt-4 flex"}>
                     <StarsRating item={movie.vote_average}/>
                     <p className={'flex ml-4'}>
-                        <Image className={'w-5 h-5'} src="/icons/icons8-like-24.png" alt="icon"/>
+                        <Image src="/icons/icons8-like-24.png" alt="icon" width={'20'} height={'10'}/>
                         <span className={'text-sm ml-1'}>{movie.vote_count}</span>
                     </p>
                 </div>
