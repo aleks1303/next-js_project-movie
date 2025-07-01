@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieDetailsComponent from "@/components/movie-details-components/MovieDetailsComponent";
 type Props = {
-    params: {id:string}
+    params: Promise<{id:string}>
 }
 
 const DetailsByIdPage = async ({params}:Props) => {
