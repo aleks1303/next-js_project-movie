@@ -20,6 +20,15 @@ export const movieService = {
         const {data} = await moviesApi.get(`/movie/${id}`)
         return data
     },
+    searchMoviesByQuery: async (query: string): Promise<IMovies[]> => {
+        const { data } = await moviesApi.get('/search/movie', {
+            params: {
+                query,
+                page: 1,
+            },
+        })
+        return data.results
+    },
 
 }
 

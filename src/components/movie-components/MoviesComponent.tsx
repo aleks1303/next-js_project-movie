@@ -10,7 +10,7 @@ const MoviesComponent = async ({page = '1', genre = ''}) => {
     ])
 
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2.5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {movies.map(movie => {
                 const genreNames = movie.genre_ids.map(id => {
                     const found = genres.find(g => g.id === id)
