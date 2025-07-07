@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const MenuComponent = () => {
     return (
-        <div>
-            <ul>
-                <li className={'flex justify-start'}>
+        <div className={'pt-3'}>
+            <ul className={'pl-5 mt-2'}>
+                <li>
                     <Link href={'/?page=1'}>Home</Link>
                 </li>
             </ul>

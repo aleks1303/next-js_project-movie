@@ -1,12 +1,10 @@
-
-import type {FC} from "react";
 import {Star} from "lucide-react";
 
 type Props = {
     item: number;
 };
 
-const StarsRating: FC<Props> = ({item}) => {
+const StarsRating = ({item}: Props) => {
     const starsCount = Math.round(item);
 
     return (

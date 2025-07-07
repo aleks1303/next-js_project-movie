@@ -5,7 +5,6 @@ import CompanyComponent from "@/components/movie-details-components/CompanyCompo
 import LanguageComponent from "@/components/movie-details-components/LanguageComponent";
 import StarsRating from "@/components/renting-component/RentingComponent";
 import Image from "next/image";
-import MenuComponent from "@/components/menu-component/MenuComponent";
 import BackComponent from "@/components/menu-component/BackComponent";
 
 type Props = {

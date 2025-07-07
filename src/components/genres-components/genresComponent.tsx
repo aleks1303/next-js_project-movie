@@ -7,7 +7,7 @@ interface Props {
 }
 
 const GenresComponent = async ({selectedGenreId}: Props) => {
-    const genres = await  movieService.getAllGenres()
+    const genres = await movieService.getAllGenres()
     return (
         <div className="h-[calc(100vh-100px)] overflow-y-auto bg-black text-white p-4">
             {genres.length === 0 && <p>Жанри поки не завантажені</p>}
