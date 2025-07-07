@@ -7,7 +7,6 @@ import {FormValidator} from "@/validator/validator";
 import {useRouter} from "next/navigation";
 
 
-
 type Props = {
     query: string
 }

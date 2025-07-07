@@ -29,6 +29,5 @@ export const movieService = {
         })
         return data.results
     },
-
 }
 

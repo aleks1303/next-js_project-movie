@@ -35,7 +35,6 @@ const SearchComponent = async ({ query }: Props) => {
                                 ))}
 
                             </div>
-
                         )}
                         <div className={'flex justify-center'}><BackComponent/></div>
                     </>
