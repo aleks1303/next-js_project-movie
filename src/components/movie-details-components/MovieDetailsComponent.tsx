@@ -18,7 +18,11 @@ const MovieDetailsComponent = async ({params}: Props) => {
     return (
         <div>
             <div className={"p-3 bg-gray-100 flex gap-6"}>
-                <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className={'w-150'}
+                <Image src={
+                    movie?.poster_path
+                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                        : "/images/no-image.png"
+                } alt={movie.title} className={'w-150'}
                        width={'900'} height={'100'}/>
                 <div>
                     <h1 className={"text-4xl underline"}>{movie.title}</h1>

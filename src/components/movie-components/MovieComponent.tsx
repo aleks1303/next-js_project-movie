@@ -16,10 +16,14 @@ const MovieComponent = ({ item, genreNames }: Props) => {
         <Link href={{pathname: `/movie-details/${item.id.toString()}}`, query:{name: item.title}}}>
             <div className="bg-black text-white p-2 rounded h-135">
                 <Image
-                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                    src={
+                        item?.poster_path
+                            ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+                            : "/images/no-image.png"
+                    }
                     alt={item.title}
                     width={270}
-                    height={450}
+                    height={900}
                     className="rounded"
                 />
                 <p className="text-lg mt-2">{item.title}</p>
