@@ -22,12 +22,12 @@ const FormComponent = ({query}: Props) => {
         resolver: joiResolver(FormValidator)
     });
 
-    const handler = ({query}: IForm) => {
+    const handlerForm = ({query}: IForm) => {
         router.push(`/search?query=${encodeURIComponent(query.trim())}`);
     };
     return (
         <div className={'pt-3'}>
-            <form onSubmit={handleSubmit(handler)} className="flex items-center gap-2 mb-3">
+            <form onSubmit={handleSubmit(handlerForm)} className="flex items-center gap-2 mb-3">
                 <label>
                     <input
                     type="text"{...register('query')}
