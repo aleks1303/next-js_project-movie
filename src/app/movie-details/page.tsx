@@ -2,7 +2,8 @@ import React from 'react';
 
 const Page = () => {
     return (
-        <div>
+        <div className={'flex justify-center items-center h-screen text-3xl'}>
+            Not Found
         </div>
     );
 };

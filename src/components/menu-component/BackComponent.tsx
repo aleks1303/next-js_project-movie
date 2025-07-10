@@ -5,7 +5,7 @@ import {useRouter} from 'next/navigation';
 
 const BackComponent = () => {
     const router = useRouter();
-    const handler = () => {
+    const handlerBack = () => {
         router.back()
     }
     return (
@@ -13,7 +13,7 @@ const BackComponent = () => {
             <ul>
                 <li className="flex justify-center mt-10">
                     <button
-                        onClick={handler}
+                        onClick={handlerBack}
                         className="border border-gray-500 rounded px-4 py-2"
                     >
                         Назад
